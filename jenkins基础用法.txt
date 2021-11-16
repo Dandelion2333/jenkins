@@ -1,0 +1,4 @@
+构建命令：
+	1、一行指令是一个shell，所以不能够多行合并使用。
+	2、假如想要cd到某个路径，然后执行某个脚本，则使用 && 的方式
+		例如：cd /mnt/orbdisk/jenkins/workspace/vicenter_check/ && ./exec_docker.sh
