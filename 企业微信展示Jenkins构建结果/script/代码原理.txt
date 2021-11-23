@@ -1,0 +1,4 @@
+1、由于Jenkins正在编译的时候，通过Jenkins的API获取不到最后一次构建的结果。
+	所以，采取异步的处理方式。
+2、monitor脚本用于监控Jenkins是否构建了（监控的方式是查看result.txt文件是否变成了over）
+3、当检测到over后，就通过Jenkins的API获取构建数据，然后拼接数据，再发送数据。最后把over改成wait，等待下次触发。
